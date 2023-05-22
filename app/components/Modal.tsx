@@ -59,6 +59,7 @@ const Modal: React.FC<ModalProps> = ({
                                 shadow-xsl
                                 transition-all
                                 w-full
+                                h-auto
                                 sm:my-8
                                 sm:w-full
                                 sm:max-w-lg
