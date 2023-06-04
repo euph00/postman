@@ -1,4 +1,5 @@
 import bcrypt from 'bcrypt';
+import rsa from 'js-crypto-rsa';
 
 import prisma from '@/app/libs/prismadb';
 import { NextResponse } from 'next/server';
@@ -19,6 +20,10 @@ export async function POST(
         }
 
         const hashedPassword = await bcrypt.hash(password, 12);
+
+        const key = await rsa.generateKey(2048);
+        const publicKey = key.publicKey;
+        const privateKey = key.privateKey;
 
         const user = await prisma.user.create({
             data: {
