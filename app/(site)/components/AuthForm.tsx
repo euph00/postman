@@ -149,7 +149,7 @@ const AuthForm = () => {
                             </Button>
                         </div>
                 </form>
-                <div className="mt-6">
+                {/* <div className="mt-6">
                     <div className="relative">
                         <div
                             className="
@@ -178,7 +178,7 @@ const AuthForm = () => {
                         />
                         
                     </div>
-                </div>
+                </div> */}
                 <div className="
                     flex
                     gap-2
